@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: QPProposal.aux
+The style file: apalike.bst
+Database file #1: references.bib
+You've used 20 entries,
+            1935 wiz_defined-function locations,
+            602 strings with 6128 characters,
+and the built_in function-call counts, 6787 in all, are:
+= -- 659
+> -- 241
+< -- 21
++ -- 85
+- -- 77
+* -- 532
+:= -- 1237
+add.period$ -- 61
+call.type$ -- 20
+change.case$ -- 127
+chr.to.int$ -- 20
+cite$ -- 20
+duplicate$ -- 273
+empty$ -- 486
+format.name$ -- 105
+if$ -- 1296
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 23
+newline$ -- 103
+num.names$ -- 62
+pop$ -- 119
+preamble$ -- 1
+purify$ -- 137
+quote$ -- 0
+skip$ -- 209
+stack$ -- 0
+substring$ -- 424
+swap$ -- 23
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 106
+warning$ -- 0
+while$ -- 57
+width$ -- 0
+write$ -- 258

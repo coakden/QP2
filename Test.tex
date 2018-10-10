@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{tipa}
+\usepackage{gb4e}
+\noautomath
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\begin{document}
+
+
+\begin{exe}
+\ex
+\begin{xlist}
+\ex\label{ex1a}
+\glll \v{Z}iurek, \v{c}ia para\v{s}ytas \v{z}odis [target]. \\
+\textipa{ZuRek} \textipa{\t{tS}a} \textipa{p\super haRaSi:tas} \textipa{Zodis} {} \\
+look there write.past word {} \\
+\glt `Look, the word [target] is written over there'
+\vspace{1cm}
+\ex\label{ex1b}
+\glll \v{Z}odis [target] para\v{s}ytas keistai. \\
+\textipa{Zodis} {} \textipa{p\super haRaSi:ts} \textipa{k\super heistai} \\
+word {} write.past strange \\
+\glt `The word [target] is written strangely.'
+\end{xlist}
+\end{exe}
+
+
+
+\vspace{2cm}
+\begin{exe}
+\ex \textit{Experiment Hypotheses}\
+\begin{xlist}
+\ex\label{ex1a} Hypothesis 1: \
+\ex\label{ex1b} Hypothesis 2: \
+\end{xlist}
+\end{exe}
+
+\begin{table}
+\begin{center}
+\caption{Logistic Regression Models, [i]}
+\begin{tabular}{r|cccc}
+& $\beta$ & $se$ & $z$ & $p$ \\
+\hline \
+\textbf{Repetition Model} \\
+F0 & 7.44 & 2.02 & 3.68 & <0.05 \\
+Duration & 1.44 & 0.56 & 2.56 & <0.05 \\
+\hline
+\textbf{Frame Sentence Model} \\
+F0 & 8.13 & 3.25 & 2.5 & <0.05 \\
+Duration & 1.51 & 0.67 & 2.26 & <0.05 \\
+\hline
+\textbf{Repetition+Frame Model} \\
+F0 & 8.05 & 2.36 & 3.42 & <0.05 \\
+Duration & 1.58 & 0.66 & 2.4 & <0.05 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{tabular}{|c|l|l|}
+\hline
+This & That & The other \\
+\hline
+1 & 2 & 3 \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} \\
+\hline
+\end{tabular}
+\begin{tikzpicture}
+\matrix [matrix of nodes] {
+	A & B & C \\
+	R & S & T \\
+};
+\end{tikzpicture}
+\end{document}

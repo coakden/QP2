@@ -1,0 +1,106 @@
+\begin{thebibliography}{}
+
+\bibitem[Bao, 1990]{Bao1990}
+Bao, Z. (1990).
+\newblock {\em On the nature of tone}.
+\newblock PhD thesis, Massachusetts Institute of Technology.
+
+\bibitem[Chandlee, 2014]{Chandlee2014}
+Chandlee, J. (2014).
+\newblock {\em Strictly local phonological processes}.
+\newblock PhD thesis, University of Delaware.
+
+\bibitem[Chandlee et~al., 2014]{Chandleeetal2014}
+Chandlee, J., Eyraud, R., and Heinz, J. (2014).
+\newblock Learning strictly local subsequential functions.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  2:491--503.
+
+\bibitem[Chandlee and Jardine, 2018]{ChandJard}
+Chandlee, J. and Jardine, A. (2018).
+\newblock Autosegmental isl functions.
+\newblock manuscript.
+
+\bibitem[Chandlee and Lindell, pear]{ChandLindta}
+Chandlee, J. and Lindell, S. (to appear).
+\newblock A logical characterization of strictly local functions.
+\newblock In Heinz, J., editor, {\em Doing Computational Phonology}. OUP.
+
+\bibitem[Chen, 2000]{Chen2000}
+Chen, M.~Y. (2000).
+\newblock {\em Tone sandhi: Patterns across Chinese dialects}, volume~92.
+\newblock Cambridge University Press.
+
+\bibitem[Chomsky, 1972]{Chomsky1972}
+Chomsky, N. (1972).
+\newblock {\em Studies on semantics in generative grammar}, volume 107.
+\newblock Walter de Gruyter.
+
+\bibitem[Clements, 1985]{Clements1985}
+Clements, G.~N. (1985).
+\newblock The geometry of phonological features.
+\newblock {\em Phonology}, 2:225--252.
+
+\bibitem[Courcelle, 1994]{Courcelle1994}
+Courcelle, B. (1994).
+\newblock Monadic second-order definable graph transductions: a survey.
+\newblock {\em Theoretical Computer Science}, 126:53--75.
+
+\bibitem[Enderton and Enderton, 2001]{Enderton2001}
+Enderton, H. and Enderton, H.~B. (2001).
+\newblock {\em A mathematical introduction to logic}.
+\newblock Elsevier.
+
+\bibitem[Engelfriet and Hoogeboom, 2001]{EngHoo2001}
+Engelfriet, J. and Hoogeboom, H.~J. (2001).
+\newblock Mso definable string transductions and two-way finite transducers.
+\newblock {\em ACM Transactions on Computational Logic}, 2:216--254.
+
+\bibitem[Fagin et~al., 1995]{Fagin1995}
+Fagin, R., Stockmeyer, L.~J., and Vardi, M.~Y. (1995).
+\newblock On monadic np vs monadic co-np.
+\newblock {\em Information and Computation}, 120(1):78--92.
+
+\bibitem[Goldsmith, 1976]{Goldsmith1976}
+Goldsmith, J.~A. (1976).
+\newblock {\em Autosegmental phonology}, volume 159.
+\newblock Indiana University Linguistics Club Bloomington.
+
+\bibitem[Hayes et~al., 2013]{Hayes2013}
+Hayes, B., Curtiss, S., Szabolcsi, A., Stowell, T., Stabler, E., Sportiche, D.,
+  Koopman, H., Keating, P., Munro, P., Hyams, N., et~al. (2013).
+\newblock {\em Linguistics: An introduction to linguistic theory}.
+\newblock John Wiley \& Sons.
+
+\bibitem[Odden, 2001]{Odden2001}
+Odden, D. (2001).
+\newblock Tone shift and spread in taita i.
+\newblock {\em Studies in African Linguistics}, 30(1):75--110.
+
+\bibitem[Pulleyblank, 1986]{Pulleyblank1986}
+Pulleyblank, D. (1986).
+\newblock {\em Tone in lexical phonology}, volume~4.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Rose, 1990]{Rose1990}
+Rose, P. (1990).
+\newblock Acoustics and phonology of complex tone sandhi.
+\newblock {\em Phonetica}, 47(1-2):1--35.
+
+\bibitem[Sagey, 1986]{Sagey1986}
+Sagey, E.~C. (1986).
+\newblock {\em The representation of features and relations in non-linear
+  phonology}.
+\newblock PhD thesis, Massachusetts Institute of Technology.
+
+\bibitem[Shoenfield, 2010]{Shoenfield2010}
+Shoenfield, J.~R. (2010).
+\newblock {\em Mathematical logic}.
+\newblock AK Peters/CRC Press.
+
+\bibitem[Yip, 1989]{Yip1989}
+Yip, M. (1989).
+\newblock Contour tones.
+\newblock {\em Phonology}, 6:149--174.
+
+\end{thebibliography}

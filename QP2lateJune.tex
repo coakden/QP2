@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pifont}
+\usepackage{tipa}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{matrix}
+\usepackage{gb4e}
+\noautomath
+\newcommand{\C}{$\mathtt{cntr(w)}$ }
+\title{Tone Sandhi Alternations as Melody-Local Grammars (Jetlag Edition)}
+\author{Chris Oakden}
+\begin{document}
+\maketitle
+So far, we have been looking at tone sandhi, with a specific eye toward disyllabic sandhi in Tianjin and Nanjing. Before positing new functions which operate over register/melodic tiers, it is important to determine how much mileage we can get out of the $\mathtt{cntr(w)}$ function and the OCP. Previous writeups have shown that the $\mathtt{mldy(w)}$ function makes incorrect predictions about surface sandhi patterns in these two dialects, however $\mathtt{cntr(w)}$ has not been explored in detail. 
+\section{The $\mathtt{cntr(w)}$ Function}
+Jardine (2018:43) posits the $\mathtt{cntr(w)}$ function, which ```expands' contour-toned TBUs (but leaves H and L-toned TBUs as is)".
+\begin{exe}
+\ex
+\begin{tabular}[t]{lcl}
+$\mathtt{cntr}$(F) & = & HL \\
+$\mathtt{cntr}$(R) & = & LH \\
+$\mathtt{cntr}$(LR) & = & LLH
+\end{tabular}
+\end{exe}
+Let us examine how this function can be applied to tone sandhi in Tianjin and Nanjing.
+\section{Tianjin}
+Recall the Tianjin data:
+\begin{exe}
+\ex
+\begin{tabular}[t]{ccc}
+ Input && Output \\
+ \hline
+LL & $\rightarrow$ & RL \\
+RR & $\rightarrow$ & HR \\
+FF & $\rightarrow$ & LF \\
+FL & $\rightarrow$ & HL \\
+\end{tabular}
+\end{exe}
+The Tianjin sandhi data comprise syllable- and melody-level dissimilation patterns. An OCP constraint on strings (assuming contours as primitives) captures the first three patterns straight-forwardly; the set of forbidden substructures below includes adjacent identical elements. But what of the fourth pattern?
+\begin{exe}
+\ex
+$\mathcal{S}_{TJ}$ = \{LL, RR, FF, FL(?)\}
+\end{exe}
+Expanding the string FL via $\mathtt{cntr(w)}$ yields HLL. One possibility is that the illformedness of the structure is due to the presence of adjacent L segments\textemdash an OCP effect\textemdash in the output of $\mathtt{cntr}$(FL) (or in other words, in the \textit{melody}?). Eschewing the $\mathtt{mldy(w)}$ function for a moment, we can characterize this ungrammatical melody in Tianjin in (at least) two ways:
+\begin{exe}
+\ex
+\begin{xlist}
+	\ex HLL
+	\ex LL
+\end{xlist}
+\end{exe}
+Considering only the LL sub-melody of the output of $\mathtt{cntr}$(FL) captures the OCP-ness of the structure's illformedness. It also mirrors the string-level prohibition on adjacent sequences of L; Tianjin sandhi is sensitive to these sequences both at the syllable level and on the melodic tier. However, these representations are problematic, as they are sub-melodies of acceptable outputs to the $\mathtt{cntr(w)}$ function, namely $\mathtt{cntr}$(FR) = HLLH. Retaining the contours-as-primitives representation (that is, R and F) circumvents this problem, as FL is not equivalent to FR. \par
+An important generalization is potentially lost here, however; prohibited sequences are resolved either through contour simplification (in the case of \textbf{R}R $\rightarrow$ \textbf{H}R, \textbf{F}F $\rightarrow$ \textbf{L}F, and \textbf{F}L $\rightarrow$ \textbf{H}L) or through creation of a contour from a level tone (LL $\rightarrow$ RL). This suggests that the contour tones are indeed sequences of level tones which can be manipulated through deletion or addition of associations. $\mathtt{cntr(w)}$ is of potential use here, because it yields the sequences of H and L which can be manipulated in these alternations. As implied above, though, the OCP intuition afforded by the F and R representation is lost in the application of this function.
+\section{Nanjing}
+The Nanjing data are less straightforward still. Recall the six observed disyllabic sandhi alternations, where Tq stands for a checked tone:
+\begin{exe}
+\ex
+\begin{tabular}[t]{lcl}
+ Input && Output \\
+ \hline
+FF & $\rightarrow$ & HF \\
+LL & $\rightarrow$ & RL \\
+RHq& $\rightarrow$ & LHq \\
+HHq& $\rightarrow$ & FHq \\
+LH & $\rightarrow$ & RH \\
+LF & $\rightarrow$ & RF \\
+\end{tabular}
+\end{exe}
+Of the four dissimilatory patterns, two exhibit sensitivity to syllable-level tones (FF and LL), while two are arguably triggered by adjacent H elements on the melodic tier (RHq and HHq). The melodic tier is also the locus of the assimilation alternations. \par
+There is a symmetry between the assimilation and dissimilation patterns. Feeding RHq and LF into the \C function yields the TBU strings that contain the prohibited identical and non-identical substrings, respectively. This creates a uniformity in the characterizations of the prohibited sequences that trigger sandhi, whether they are dissimilatory or assimilatory in nature.
+\begin{exe}
+\ex
+\begin{tabular}[t]{lcllll}
+$\mathtt{cntr}$(RHq) & = & L\textbf{HH}q & $\approx$ & \textbf{HH}q & (dissimilation) \\
+$\mathtt{cntr}$(LF) & = & \textbf{LH}L &  $\approx$ & \textbf{LH} & (assimilation) \\
+\end{tabular}
+\end{exe}
+But then how to characterize these in terms of illicit substructures? The same issue arises here as did for the Tianjin patterns. Thinking only in terms of two-factors on the melodic tier, HH and LH predict other well-formed sequences of tones to be ungrammatical, namely sequences of two (non-checked) high tones HH, and a single rising tone (as the output of $\mathtt{cntr}$(R) = LH).
+\section{Summary}
+Using the \C function and OCP over string representations to characterize tone sandhi patterns in Chinese dialects fares better than earlier attempts using the $\mathtt{mldy(w)}$ function. Intuitions about the locus of OCP restrictions are clearer using this representation. In spite of this progress, similar problems plague this analysis as did those which utilize $\mathtt{mldy(w)}$: certain grammatical structures are predicted to be ill-formed. Some greater degree of specification (perhaps enrichment of the representation to include syllable boundaries) is needed to disambiguate well-formed and ill-formed structures in the data.
+\end{document}

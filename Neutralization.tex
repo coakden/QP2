@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{tipa}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{matrix, arrows, automata}
+\usepackage{natbib}
+\usepackage{gb4e}
+\noautomath
+\newcommand{\Y}{$\checkmark$}
+\newcommand{\R}{$\Rightarrow$}
+\newcommand\myeq{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}
+\newcommand{\ap}{\approx}
+\title{Neutralization in Shanghai and Zhangping}
+\author{Chris Oakden}
+\begin{document}
+\maketitle
+Our formalization of tone sandhi as I/O mapping transductions can also accommodate cases of sandhi which neutralize underlying contrast. Interestingly, it is possible to conceive of many of these cases as procedurally similar to assimilation (via spreading) and dissimilation (via feature-changing). We illustrate with examples from Shanghai, a northern Wu dialect and Zhangping, a Min dialect. \par
+\citet{Chen2000} points toward the well-known case of Shanghai \citep{Xuetal1981, ZeeMaddieson1980, SelkirkShen1990, Duanmu1991}  as an example of neutralization. Within a particular domain, all non-initial tones delete, and the contour of the first syllable spreads over its entirety. Consider two disyllabic forms [ma.m\textipa{O}] `buy a cat' and [ma.m\textipa{O}] `buy a hat'; Chen conceptualizes neutralization here as a case of deletion of all non-initial tones followed by spreading;
+\begin{center}
+\begin{tabular}[t]{lll}
+\textipa{ma} & \textipa{mO} & `buy a cat' \\
+LH & HM & base tones \\
+LH & . & Deletion\\
+L. & H & Spread
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}[t]{lll}
+\textipa{ma} & \textipa{mO} & `buy a hat' \\
+LH & LM & base tones \\
+LH & . & Deletion\\
+L. & H & Spread
+\end{tabular}
+\end{center}
+In Shanghai, the tonal contrast between morphemes [m\textipa{O}$^{\textnormal{HM}}$] `cat' and [m\textipa{O}$^{\textnormal{LM}}$] `hat' is \emph{neutralized} in non-domain-initial position. \par
+The graphical representation of neutralization in Shanghai is not of immediate interest to us here, so we do not provide it. Defining a logical transduction of the process is similar to other spreading processes; the tones which do not surface are `deleted' in the definition of the unary relations over terminal tonal nodes, and `spreading' is achieved in the definition of dominance ($\delta(x)\ap y$).
+\begin{equation}
+\begin{aligned}
+P^{\tau}_{\sigma}(x)&\myeq P_{\sigma}(x) & P^{\tau}_{T,c}(x)&\myeq P_{T,c}(x) \\
+P^{\tau}_{+u}(x)&\myeq P_{r}(x) & P^{\tau}_{-u}(x)&\myeq\mathtt{F} \\
+P^{\tau}_{l}(x)&\myeq P_{l}(x)\land first(\delta(x)) & P^{\tau}_{h}(x)&\myeq P_{h}(x)\land first(\delta(x)) \\
+\delta^{\tau}(x)\ap y &\myeq \big(P_{r}(x)\land P_{T}(y)\land \delta(x)\ap y\big)\,\lor & succ^{\tau}(x)\ap y &\myeq \big(P_{\sigma}(x,y)\land succ(x)\ap y\big)\,\lor \\
+&\quad\,\,\big(P_{c}(x)\land P_{T}(y)\land \delta(x)\ap y\big)\,\lor & &\quad\,\,\big(P_{T}(x,y) \land succ(x)\ap y\big)\,\lor \\
+&\quad\,\,\big(P_{l}(x)\land P_{c} (y) \land first(\delta(x)) \land first(y)\big)\,\lor & &\quad\,\,\big(P_{r}(x,y) \land succ(x)\ap y\big)\,\lor \\ 
+&\quad\,\,\big(P_{h}(x)\land P_{c} (y)\land first(\delta(x)) \land last (y) \big) & &\quad\,\,\big(P_{c}(x,y) \land succ(x)\ap y\big)\,\lor \\
+\alpha^{\tau}(x)\ap y&\myeq \alpha(x) \ap y & &\quad\,\,\big(P_{t}(x,y)\land first(\delta(x,y))\land succ(x)\ap y\big)\,\lor \\
+& & &\quad\,\,\big(P_{h}(x,y)\land first(\delta(x,y))\land x\ap y\big) \\
+\end{aligned}
+\end{equation}
+There is an assumption in this transduction that is not discussed in any detail by Chen, that is, that the first syllable's register feature is [+u]. The analysis does not discuss spreading of register or contour features, but rather only the tone. It is reasonable to assume that the non-initial syllables have the same register designation as the first syllable which spreads. We achieve this by `copying' the register of the first syllable (in this case upper register) onto all non-initial syllables. \par
+As was the case with Zhenhai and Zhenjiang, terminal nodes are `deleted' from the output structure by defining unary predicates to only include surface-present tones. The first syllable's [H] tone spreads to the second syllable via the domination definition, specifically the disjunct $\big(P_{h}(x)\land P_{c} (y)\land first(\delta(x)) \land last (y) \big)$. Note that association does not change, nor does linear order, with the exception of the terminal tonal nodes; since only the tones from the first syllable are present, only their linear order is preserved (the penultimate disjunct of $succ(x)\ap y$), and the [H] becomes the new final tone on that tier (the final disjunct). \par
+Zhangping: stay tuned!
+\bibliographystyle{apalike}
+\bibliography{references}
+\end{document}

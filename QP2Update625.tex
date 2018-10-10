@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pifont}
+\usepackage{array}
+\usepackage{tipa}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{matrix}
+\usepackage{gb4e}
+\noautomath
+\newcommand{\C}{$\mathtt{cntr(w)}$ }
+\newcommand{\Y}{$\checkmark$}
+\newcommand{\N}{\ding{55}}
+\title{QP 2 Update: 6/25}
+\author{Chris Oakden}
+\begin{document}
+\maketitle
+There are two basic questions I would like to address in this update:
+\begin{exe}
+\ex
+\begin{xlist}
+	\ex What is the full set of well-formed surface strings in Tianjin? (starting with strings of length 2)
+	\ex What happens with strings of length $>$2? 
+\end{xlist}
+\end{exe}
+\section{Well-formed surface strings: $|2|$}
+An important question to consider is which surface strings are grammatical in Tianjin and which are not. We know that there are four observed sandhi patterns for disyllabic sequences, but we have yet to consider the well-formed strings. This is especially true for the FL $\rightarrow$ HL pattern, which we claim is the result of melodic-tier level OCP (prohibiting L.L sequences). Are other L.L sequences grammatical, such as FR (HL.LH)? In his analysis of Tianjin, Chen (2000:119) indicates that the prohibited L.L sequence is in fact attested in other disyllabic sequences besides FL:
+\begin{exe}
+\ex \label{T1}
+\begin{tabular}[t]{lclc}
+FR & = & H\textbf{L.L}H & \Y  \\
+LR & = & \textbf{L.L}H & \Y \\
+FL & = & H\textbf{L.L} & \N \\
+\end{tabular}
+\end{exe}
+Similarly, there does not seem to be any restriction on H.H sequences in the melody (only RH is presented by Chen (2000) as a grammatical sequence, but other logical possibilities are included):
+\begin{exe}
+\ex
+\begin{tabular}[t]{lclc}
+RH & = & L\textbf{H.H} & \Y  \\
+HH & = & \textbf{H.H} & \Y \\
+RF & = & L\textbf{H.H}L & \Y \\
+\end{tabular}
+\end{exe}
+The well-formed sequences of disyllables in Tianjin is thus the complement of the set \{LL, RR, FF, FL\}. \par 
+This begs the question: is *FL truly an OCP effect? If other L.L sequences are well-formed, is it correct to posit that the ill-formed sequence is L.L on the melodic tier and not arbitrarily FL on the syllable tier? Interestingly, Chen (2000:110-112) proposes two OCP constraints to prohibit the ill-formed sequences: OCP for `total identity' cases (LL, RR, FF) and a `partial identity' OCP applying only to FL sequences, which he terms OCP$'$:
+\begin{exe}
+\ex
+\begin{tabular}[t]{ll}
+OCP: & no adjacent identical tones (except HH) \\
+OCP$'$: & no FL sequence \\
+\end{tabular}
+\end{exe}
+In this analysis, OCP$'$ is evaluated over whole syllables, not the melodic tier; in other words, LR and FR do not violate OCP$'$. Later on, however (123-126), he proposes a third OCP constraint, OCP$''$, which prohibits adjacent identical tonal segments in the melody. Chen makes a convincing case for how this constraint is active in determining syllable-level dissimilation (FF and RR); emergence effects of low-ranked OCP$''$ guarantee the mappings FF $\rightarrow$ LF and RR $\rightarrow$ HR, not the unattested (but logically possible) FF $\rightarrow$ *HF and RR $\rightarrow$ *LR. The former do not violate OCP$''$ while the latter do.  \par
+The goal here is not to belabor the specifics of Chen's analysis, but rather to draw attention to an important issue, that is, the notion of the OCP operating on the syllable level and on the melodic tier. This question is relevant to the representation of tones, and to the characterization of illicit substructures. Syllable-level representation of tones in Tianjin allows for a straightforward and accurate description of the ill-formed two-factors: \{LL, RR, FF, FL\}. Classifying these as OCP effects is only felicitous for the first three; FL is not a case of adjacent, identical elements at this level of representation. It is only on the melodic tier that the OCP-ness of *FL becomes apparent, that is, in the sequence L.L. This is not a hard prohibition, though; as (\ref{T1}) shows, other sequences of L.L and even HL.L in the melody are well-formed, namely HL.LH. An attempt to describe the illicit sub\emph{melodies} (as outputs of the \C function, for instance) in Tianjin therefore fails to make accurate predictions as described above (short of enriching the representation with syllable and word boundaries). But there is a sense in which the \C function is necessary to gain access to the melodic tier and the tone-to-TBU associations, if not to hone in on the locus of the violation\textemdash if it is indeed OCP\textemdash then at least to derive the post-sandhi surface forms (via tonal deletion, for example). \par
+On which tier the OCP applies is also relevant to the Nanjing data; two of the six observed sandhi patterns are syllable-level dissimilation, while two are arguably cases of dissimilation on the melodic tier; the ill-formed sequence *RHq is not a case of adjacent, identical elements, though whether or not *HHq is is debatable. Additionally, the same issues which plague illicit submelody descriptions in Tianjin are also evident in Nanjing:
+\begin{exe}
+\ex 
+\begin{tabular}[t]{lll}
+Prohibited String & Output of \C & Attested Melody \\
+\hline
+RHq & LH.H & \textbf{LH.H}L (rising + falling) \\
+HHq & H.H & H\textbf{H.H}H (two high, non-checked tones)\\ 
+\end{tabular}
+\end{exe}
+So again, barring some enrichment to the representation, describing illicit substructures (in this case melodies) runs into trouble.
+\section{Well-formed surface strings: $>|2|$}
+Another important question to consider is what happens in Tianjin for strings of length $>$2. Looking only at strings of length 3, we see that the data become more complicated. The relevant data are from Chen (2000:107).
+\begin{exe}
+\ex \label{T2}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}[t]{lllllll}
+& Input & Output & [x x] x & x [x x] & [x x x] \\
+\hline 
+P1 & FFL & LHL & \textit{[si.ji] qing} & \textit{zuo [dian.che]} & \\
+&&& `evergreen' & `take a gram' & \\
+P2 & RRR & HHR & \emph{[li.fa] suo} & \emph{mu [lao.hu]} & \emph{ma.zu.ka}\\
+&&& `barber shop' & `tigress' & `mazurka' \\
+P3 & FFF & HLF & \emph{[su.liao] bu} & \emph{ya [re.dai]} & \emph{yi.da.li}\\
+&&& `plastic cloth' & `subtropical' & `Italy' \\
+P4 & LLL & LRL & \emph{[tuo.la] ji} & \emph{kai [fei.ji]} & \\
+&&& `tractor' & `fly a plane' & \\
+P5 & RLL & HRL & \emph{[bao.wen] bei} & \emph{da [guan.qiang]} & \\
+&&& `thermos cup' & `speak like a bureaucrat' & \\
+P6 & LFF & RLF & \emph{[wen.du] ji} & \emph{tong [dian.hua]} & \\
+&&& `thermometer' & `make a phone call' & \\
+P7 & FLL & FRL & \emph{[lu.yin] ji} & \emph{shang [fei.ji]} & \\
+&&& `cassette recorder' & `board an airplane' & \\
+\hline
+\end{tabular}
+\end{exe}
+Most of the other logically possible patterns do not observe any alternation, and there are some for which prohibited 2-factors present in a trisyllabic sequence undergo sandhi as normal (e.g. \textbf{FL}R $\rightarrow$ \textbf{HL}R, R\textbf{FF} $\rightarrow$ R\textbf{LF}). What is interesting about the cases in (\ref{T2}) is that the observed output forms do not follow from uniform left-to-right application of the `rules' observed for disyllables. In other words, these forms run into directionality issues. Chen (2000) and Wee (2010) have pointed out that these data pose problems for both derivational and OT accounts. Earlier in the year, we had an email correspondence with Jane Chandlee in which she proposed a SL function analysis of the data. In this analysis, three rules are posited, and a specific order of application (composition) on them is imposed.
+\begin{exe}
+\ex
+\begin{xlist}
+	\ex L $\rightarrow$ R / \underline{\hspace{1em}} L (ROSL3) 
+	\ex R $\rightarrow$ H / \underline{\hspace{1em}} R (ISL) 
+	\ex F $\rightarrow$ L / \underline{\hspace{1em}} F (ROSL4) 
+	\ex Order of composition: ISL $\circ$ ROSL3 $\circ$ ROSL4
+\end{xlist}
+\end{exe}
+The key point here is that sequences of length $>$2 are subject to the same constraints as disyllabic sequences\textemdash though there may be differences in how these constraints are manifested in the form of rules\textemdash with the same set of prohibited two-factors (assuming syllable-level representation) applying uniformly. Additionally, these patterns are local in nature, such that the environment of sandhi is adjacent syllables, with no intervening elements.
+\section{For next time}
+Chen (2000) describes the FL $\rightarrow$ HL pattern in Tianjin as `tonal absorption'. Citing Hyman and Schuh (1974), he claims that this process has analogs in a number of West African languages, including Bamileke, Mende, Kikuyu, Hausa, and Ngizim. In a footnote, the implementation of the process is described as ``rightward shift, with automatic OCP effect" (106) with two AR examples given. I want to look at this a bit more, because the Nanjing RHq and HHq patterns are basically identical to this.
+\end{document}

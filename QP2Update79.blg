@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: QP2Update79.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: QP2Update79-blx.bib
+Database file #2: references.bib
+Biblatex version: 3.3
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 8 entries,
+            6256 wiz_defined-function locations,
+            1221 strings with 9560 characters,
+and the built_in function-call counts, 28714 in all, are:
+= -- 1531
+> -- 700
+< -- 177
++ -- 594
+- -- 247
+* -- 2010
+:= -- 2631
+add.period$ -- 0
+call.type$ -- 8
+change.case$ -- 7
+chr.to.int$ -- 30
+cite$ -- 14
+duplicate$ -- 3321
+empty$ -- 2868
+format.name$ -- 390
+if$ -- 6078
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 0
+newline$ -- 202
+num.names$ -- 298
+pop$ -- 2319
+preamble$ -- 1
+purify$ -- 102
+quote$ -- 0
+skip$ -- 1267
+stack$ -- 0
+substring$ -- 1917
+swap$ -- 967
+text.length$ -- 185
+text.prefix$ -- 7
+top$ -- 1
+type$ -- 260
+warning$ -- 0
+while$ -- 372
+width$ -- 0
+write$ -- 195
