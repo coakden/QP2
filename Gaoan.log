@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  11 OCT 2018 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  10 OCT 2018 22:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Neutralization.tex
-(./Neutralization.tex
+**Gaoan.tex
+(./Gaoan.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -543,9 +543,8 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@rxnumiii=\count132
 \c@rxnumiv=\count133
 \lcommentsep=\skip52
-)
-(./Neutralization.aux)
-\openout1 = `Neutralization.aux'.
+) (./Gaoan.aux)
+\openout1 = `Gaoan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -561,7 +560,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 20.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 20.
-
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
@@ -577,21 +575,17 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 21.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (32.06432pt too wide) detected at line 53
-[] []
- []
+) [1
 
-[1
-
-] [2] (./Neutralization.bbl) [3] (./Neutralization.aux) ) 
+]
+(./Gaoan.bbl [2]) [3] (./Gaoan.aux) ) 
 Here is how much of TeX's memory you used:
- 14196 strings out of 493015
- 287178 string characters out of 6133377
- 374030 words of memory out of 5000000
- 17472 multiletter control sequences out of 15000+600000
- 13683 words of font info for 53 fonts, out of 8000000 for 9000
+ 14329 strings out of 493015
+ 289856 string characters out of 6133377
+ 376918 words of memory out of 5000000
+ 17604 multiletter control sequences out of 15000+600000
+ 14136 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,70p,725b,908s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,14n,70p,681b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Neutralization.dvi (3 pages, 84560 bytes).
+Output written on Gaoan.dvi (3 pages, 84036 bytes).

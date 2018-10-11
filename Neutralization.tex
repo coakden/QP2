@@ -53,7 +53,211 @@ P^{\tau}_{l}(x)&\myeq P_{l}(x)\land first(\delta(x)) & P^{\tau}_{h}(x)&\myeq P_{
 \end{equation}
 There is an assumption in this transduction that is not discussed in any detail by Chen, that is, that the first syllable's register feature is [+u]. The analysis does not discuss spreading of register or contour features, but rather only the tone. It is reasonable to assume that the non-initial syllables have the same register designation as the first syllable which spreads. We achieve this by `copying' the register of the first syllable (in this case upper register) onto all non-initial syllables. \par
 As was the case with Zhenhai and Zhenjiang, terminal nodes are `deleted' from the output structure by defining unary predicates to only include surface-present tones. The first syllable's [H] tone spreads to the second syllable via the domination definition, specifically the disjunct $\big(P_{h}(x)\land P_{c} (y)\land first(\delta(x)) \land last (y) \big)$. Note that association does not change, nor does linear order, with the exception of the terminal tonal nodes; since only the tones from the first syllable are present, only their linear order is preserved (the penultimate disjunct of $succ(x)\ap y$), and the [H] becomes the new final tone on that tier (the final disjunct). \par
-Zhangping: stay tuned!
+Zhangping is a Min dialect spoken in Fujian province \citep{Chen2000, Zhang1983}, and is reported as a case of widespread contrast neutralization; tones in non-final syllables revert to a default realization, regardless of input specification. We focus on a particular process which neutralizes register contrasts on non-final falling contours.
+\begin{center}
+\begin{tabular}[t]{lll}
+\textipa{kin} & \textipa{tsai} & `nearby' \\
+HM & MH & base form \\
+ML & MH &  sandhi form \\
+\hspace{1em} \\
+tsi & giu & `freedom' \\
+HM & ML & base form \\
+ML & ML & sandhi form \\
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}[t]{lll}
+\textipa{kin} & \textipa{tsiap} & `quickly' \\
+ML & HM & base form \\
+ML & HM &  sandhi form \\
+\hspace{1em} \\
+tsi & so & `sister-in-law' \\
+ML & ML & base form \\
+ML & ML & sandhi form \\
+\end{tabular}
+\end{center}
+In the examples above, the contrast between segmentally-identical /HM/ and /ML/ contours neutralizes in non-final position within a word. This process is restricted to falling contour tones 53, 53q (checked tone), and 31.\par
+We define a transduction $\tau$ over a Bao input signature to model this neutralization process in much the same way as dissimilation, that is, as a feature-changing operation. Crucial here are definitions of unary relations over register and terminal tonal nodes; we must restrict the process to forms with non-final falling contours, and ensure that the non-final syllable of the output is uniformly low-registered, but not derive any other changes. Definitions of syllable, root, and `c' node unary relations are consistent between input and output signatures, and are therefore omitted. The same is true for all binary functions: $\alpha(x)\ap y$, $\delta(x)\ap y$, and $succ(x)\ap y$.
+\begin{equation}
+\begin{aligned}
+P^{\tau}_{+u}(x)&\myeq P_{+u}(x)\land final(x)  \\
+P^{\tau}_{-u}(x)&\myeq P_{-u}(x) \lor (P_{+u}(x)\land \neg final(x)) \\
+P^{\tau}_{l}(x)&\myeq \big(P_{l}(x)\land \neg final(\delta(x))\land final(\delta(succ(x)))\big)\,\lor \\
+&\quad\,\,\big(P_{l}(x)\land final(\delta(x))\big) \\
+P^{\tau}_{h}(x)&\myeq \big(P_{h}(x)\land\neg final(\delta(x))\land\neg final(\delta(succ(x)))\big)\,\lor \\
+\end{aligned}
+\end{equation}
+In this process, non-final high-registered tones are changed to low register, while tones on final syllables (high or low) stay the same, as are underlyingly low-registered tones (via the definitions of $P_{+u}$ and $P_{-u}$). Among the tones which conform to these register specifications, only non-final falling contours undergo the feature-changing operation; non-final rising contours or level tones are exempt, as are any final tone. The definition of the transduction predicts neutralization only on tones of this type, and does not over-apply to other configurations.
+\begin{center}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =.5pt](z1){\small +u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+\node[draw,circle, inner sep =2pt](t1){h}; & \node[draw,circle, inner sep =2pt](t2){l}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\rightarrow$
+\hspace{.3cm}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =2pt](z1){\small -u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+\node[draw,circle, inner sep =2pt](t1){l}; & \node[draw,circle, inner sep =2pt](t2){h}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\equiv$ /HM.HM/$\mapsto$[ML.HM]
+\end{center}
+\begin{center}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =2pt](z1){\small -u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+\node[draw,circle, inner sep =2pt](t1){h}; & \node[draw,circle, inner sep =2pt](t2){l}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\rightarrow$
+\hspace{.3cm}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =2pt](z1){\small -u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+\node[draw,circle, inner sep =2pt](t1){l}; & \node[draw,circle, inner sep =2pt](t2){h}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\equiv$ /ML.HM/$\mapsto$[ML.HM]
+\end{center}
+\begin{center}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =.5pt](z1){\small +u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+\node[draw,circle, inner sep =2pt](t1){l}; & \node[draw,circle, inner sep =2pt](t2){h}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\rightarrow$
+\hspace{.3cm}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt, label={[label distance=-3pt] above left:\scriptsize *}](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =2pt](z1){\small -u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+\node[draw,circle, inner sep =2pt](t1){h}; & \node[draw,circle, inner sep =2pt](t2){l}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\equiv$ /MH.HM/$\mapsto$*[LM.HM]
+\end{center}
+\begin{center}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =2pt](z1){\small -u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+& \node[draw,circle, inner sep =2pt](t2){h}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\rightarrow$
+\hspace{.3cm}
+\begin{tikzpicture} [baseline = (y1.base)]
+\matrix (m) [matrix of nodes, column sep = 1.5em, row sep = 1.5em]{
+& \node[draw,circle, inner sep =2pt](x1){$\sigma$};  &  \node[draw,circle, inner sep =2pt, label={[label distance=-3pt] above left:\scriptsize *}](x2){$\sigma$};  \\
+& \node[draw,circle, inner sep =2pt](y1){T}; &   \node[draw,circle, inner sep =2pt](y2){T}; \\
+\node[draw,circle, inner sep =2pt](z1){\small -u}; & \node[draw,circle, inner sep =2pt](z2){c}; &   \node[draw,circle, inner sep =2pt](z3){c}; & \node[draw,circle, inner sep =.5pt](z4){\small +u}; \\
+& \node[draw,circle, inner sep =2pt](t2){l}; &  \node[draw,circle, inner sep =2pt](t3){h}; & \node[draw,circle, inner sep =2pt](t4){l}; \\
+};
+\draw (x1) -- (y1);
+\draw (x2) -- (y2);
+\draw (z1) -- (y1);
+\draw (z2) -- (y1);
+\draw (z2) -- (t2);
+\draw (y2) -- (z3);
+\draw (y2) -- (z4);
+\draw (z3) -- (t3);
+\draw (t4) -- (z3);
+\end{tikzpicture}
+\hspace{.3cm}
+$\equiv$ /M.HM/$\mapsto$*[L.HM]
+\end{center}
+The definition of the transduction will only evaluate to true for maps which contain a non-final, high-falling contour. 
 \bibliographystyle{apalike}
 \bibliography{references}
 \end{document}
